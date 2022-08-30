@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.065060">
+    <testsuite name="Maggomann Test Suite" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.065060">
+      <testsuite name="Maggomann\LaravelAddressable\Tests\ExampleTest" file="/Users/marcoehrt/Code/laravel-packages/laravel-addressable/tests/ExampleTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.065060">
+        <testcase name="test_that_true_is_true" class="Maggomann\LaravelAddressable\Tests\ExampleTest" classname="Maggomann.LaravelAddressable.Tests.ExampleTest" file="/Users/marcoehrt/Code/laravel-packages/laravel-addressable/tests/ExampleTest.php" line="8" assertions="1" time="0.065060"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
