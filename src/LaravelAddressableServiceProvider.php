@@ -2,6 +2,7 @@
 
 namespace Maggomann\LaravelAddressable;
 
+use Maggomann\LaravelAddressable\Commands\FilamentCommand;
 use Maggomann\LaravelAddressable\Commands\LaravelAddressableCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -14,7 +15,19 @@ class LaravelAddressableServiceProvider extends PackageServiceProvider
             ->name('laravel-addressable')
             ->hasConfigFile()
             ->hasMigration('create_addressable_tables')
-            ->hasCommand(LaravelAddressableCommand::class)
+            ->hasCommands([
+                FilamentCommand::class,
+                LaravelAddressableCommand::class,
+            ])
             ->hasTranslations();
+    }
+
+    public function packageBooted()
+    {
+        if ($this->package->hasTranslations) {
+            $this->publishes([
+                $this->package->basePath('/../resources/lang') => resource_path('lang/'),
+            ], "{$this->package->shortName()}-filament-translations");
+        }
     }
 }
