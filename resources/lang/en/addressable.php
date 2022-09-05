@@ -5,9 +5,9 @@ return [
 
     'address_genders' => [
         'title' => [
-            'male' => 'Herr',
-            'female' => 'Frau',
-            'diverse' => 'Diverse',
+            'male' => 'Mr.',
+            'female' => 'Ms.',
+            'diverse' => 'Various',
         ]
     ]
 ];
