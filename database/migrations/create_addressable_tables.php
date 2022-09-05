@@ -3,7 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Maggomann\LaravelAddressable\Models\Gender;
+use Maggomann\LaravelAddressable\Models\AddressCategory;
+use Maggomann\LaravelAddressable\Models\AddressGender;
 
 return new class extends Migration
 {
@@ -33,6 +34,7 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists(config('addressable.tables.address_genders'));
+        Schema::dropIfExists(config('addressable.tables.address_categories'));
         Schema::dropIfExists(config('addressable.tables.addresses'));
     }
 
@@ -65,17 +67,23 @@ return new class extends Migration
             $table->softDeletes();
         });
 
+        Schema::create(config('addressable.tables.address_categories'), function (Blueprint $table) {
+            $table->id();
+            $table->string('title_translation_key');
+            $table->timestamps();
+            $table->softDeletes();
+        });
+
         Schema::create(config('addressable.tables.addresses'), function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('gender_id')->nullable()->index();
+            $table->unsignedBigInteger('category_id')->nullable()->index();
             $table->morphs('addressable');
             $table->string('first_name')->nullable()->index();
             $table->string('last_name')->nullable()->index();
             $table->string('name')->nullable()->index();
-            $table->string('street')->nullable();
-            $table->string('street_addition')->nullable();
             $table->string('street_address')->nullable();
-            $table->string('label')->nullable();
+            $table->string('street_addition')->nullable();
             $table->string('postal_code')->nullable();
             $table->string('city')->nullable();
             $table->string('country_code', 2)->nullable()->index();
@@ -91,6 +99,7 @@ return new class extends Migration
         });
 
         $this->addGenders();
+        $this->addAddresses();
     }
 
     private function addGenders(): void
@@ -114,6 +123,30 @@ return new class extends Migration
             ],
         ];
 
-        Gender::insert($genders);
+        AddressGender::insert($genders);
+    }
+
+    private function addAddresses(): void
+    {
+        $now = now();
+        $categories = [
+            [
+                'title_translation_key' => 'address_categories.title.standard',
+                'created_at' => $now,
+                'updated_at' => $now,
+            ],
+            [
+                'title_translation_key' => 'address_categories.title.billing',
+                'created_at' => $now,
+                'updated_at' => $now,
+            ],
+            [
+                'title_translation_key' => 'address_categories.title.shipping',
+                'created_at' => $now,
+                'updated_at' => $now,
+            ],
+        ];
+
+        AddressCategory::insert($categories);
     }
 };

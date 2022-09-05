@@ -6,14 +6,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Gender extends Model
+class AddressCategory extends Model
 {
     use HasFactory;
     use SoftDeletes;
 
     public function __construct(array $attributes = [])
     {
-        $this->setTable(config('addressable.tables.address_genders', 'address_genders'));
+        $this->setTable(config('addressable.tables.address_categories', 'address_categories'));
 
         parent::__construct($attributes);
     }

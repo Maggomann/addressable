@@ -8,6 +8,6 @@ return [
             'male' => 'Mr.',
             'female' => 'Ms.',
             'diverse' => 'Various',
-        ]
-    ]
+        ],
+    ],
 ];
