@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ec334f0ac3e4489e47169871bac7dd8f",
+    "content-hash": "99a3923f906a005f5c052b78dc9c63b1",
     "packages": [
         {
             "name": "brick/math",
@@ -61,6 +61,65 @@
                 }
             ],
             "time": "2022-08-10T22:54:19+00:00"
+        },
+        {
+            "name": "dcblogdev/laravel-countries",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dcblogdev/laravel-countries.git",
+                "reference": "622a28bd705c56cc0863067ee1a8c81e5266182d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dcblogdev/laravel-countries/zipball/622a28bd705c56cc0863067ee1a8c81e5266182d",
+                "reference": "622a28bd705c56cc0863067ee1a8c81e5266182d",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Dcblogdev\\Countries\\CountriesServiceProvider"
+                    ],
+                    "aliases": {
+                        "Countries": "Dcblogdev\\Countries\\Facades\\Countries"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dcblogdev\\Countries\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Carr",
+                    "email": "dave@dcblog.dev",
+                    "homepage": "https://dcblog.dev"
+                }
+            ],
+            "description": "A Laravel countries list package",
+            "homepage": "https://github.com/dcblogdev/laravel-countries",
+            "keywords": [
+                "countries",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/dcblogdev/laravel-countries/issues",
+                "source": "https://github.com/dcblogdev/laravel-countries/tree/v2.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/dcblogdev",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-12-28T12:26:29+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
