@@ -4,6 +4,7 @@ namespace Maggomann\LaravelAddressable\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Address extends Model
@@ -31,12 +32,10 @@ class Address extends Model
         'addressable_id',
         'addressable_type',
         'first_name',
-        'first_name',
         'last_name',
         'name',
-        'street',
-        'street_addition',
         'street_address',
+        'street_addition',
         'label',
         'postal_code',
         'city',
