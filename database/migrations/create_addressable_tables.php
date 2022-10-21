@@ -33,9 +33,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(config('addressable.tables.address_genders'));
-        Schema::dropIfExists(config('addressable.tables.address_categories'));
-        Schema::dropIfExists(config('addressable.tables.addresses'));
+        Schema::dropIfExists(config('addressable.tables.address_genders', 'address_genders'));
+        Schema::dropIfExists(config('addressable.tables.address_categories', 'address_categories'));
+        Schema::dropIfExists(config('addressable.tables.addresses', 'addresses'));
     }
 
     private function executeInDevelopmentProcess()
@@ -60,21 +60,21 @@ return new class extends Migration
 
     private function executeMigrations()
     {
-        Schema::create(config('addressable.tables.address_genders'), function (Blueprint $table) {
+        Schema::create(config('addressable.tables.address_genders', 'address_genders'), function (Blueprint $table) {
             $table->id();
             $table->string('title_translation_key');
             $table->timestamps();
             $table->softDeletes();
         });
 
-        Schema::create(config('addressable.tables.address_categories'), function (Blueprint $table) {
+        Schema::create(config('addressable.tables.address_categories', 'address_categories'), function (Blueprint $table) {
             $table->id();
             $table->string('title_translation_key');
             $table->timestamps();
             $table->softDeletes();
         });
 
-        Schema::create(config('addressable.tables.addresses'), function (Blueprint $table) {
+        Schema::create(config('addressable.tables.addresses', 'addresses'), function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('gender_id')->nullable()->index();
             $table->unsignedBigInteger('category_id')->nullable()->index();
