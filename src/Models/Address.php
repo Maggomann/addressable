@@ -4,10 +4,11 @@ namespace Maggomann\LaravelAddressable\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-/** 
- * @property int|null $gender_id 
+/**
+ * @property int|null $gender_id
  * @property int|null $category_id
  * @property int $addressable_id
  * @property string $addressable_type
@@ -24,8 +25,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string|null $job_title
  * @property string|null $latitude
  * @property string|null $longitude
- * @property int|bool $is_preferred 
- * @property int|bool $is_main 
+ * @property int|bool $is_preferred
+ * @property int|bool $is_main
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property \Illuminate\Support\Carbon|null $deleted_at
@@ -74,4 +75,9 @@ class Address extends Model
         'updated_at',
         'deleted_at',
     ];
+
+    public function addressable(): MorphTo
+    {
+        return $this->morphTo();
+    }
 }
