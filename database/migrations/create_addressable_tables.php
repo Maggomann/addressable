@@ -2,7 +2,10 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Maggomann\LaravelAddressable\Database\Factories\LaravelAddressableProductionTableSeeder;
 use Maggomann\LaravelAddressable\Models\AddressCategory;
 use Maggomann\LaravelAddressable\Models\AddressGender;
 
@@ -15,51 +18,6 @@ return new class extends Migration
      */
     public function up()
     {
-        if (app()->environment('testing', 'local')) {
-            $this->executeInDevelopmentProcess();
-
-            return;
-        }
-
-        $this->executeInProductionProcess();
-    }
-
-    /**
-     * Reverse the migrations.
-     *
-     * TODO: Delete the method before the PR goes into the master
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists(config('addressable.tables.address_genders', 'address_genders'));
-        Schema::dropIfExists(config('addressable.tables.address_categories', 'address_categories'));
-        Schema::dropIfExists(config('addressable.tables.addresses', 'addresses'));
-    }
-
-    private function executeInDevelopmentProcess()
-    {
-        if (app()->environment('testing', 'local') === false) {
-            return;
-        }
-
-        try {
-            $this->executeMigrations();
-        } catch (Exception $e) {
-            $this->down();
-
-            throw $e;
-        }
-    }
-
-    private function executeInProductionProcess()
-    {
-        $this->executeMigrations();
-    }
-
-    private function executeMigrations()
-    {
         if (! Schema::hasTable(config('addressable.tables.address_genders', 'address_genders'))) {
             Schema::create(config('addressable.tables.address_genders', 'address_genders'), function (Blueprint $table) {
                 $table->id();
@@ -67,8 +25,6 @@ return new class extends Migration
                 $table->timestamps();
                 $table->softDeletes();
             });
-
-            $this->addGenders();
         }
 
         if (! Schema::hasTable(config('addressable.tables.address_categories', 'address_categories'))) {
@@ -78,8 +34,6 @@ return new class extends Migration
                 $table->timestamps();
                 $table->softDeletes();
             });
-
-            $this->addCategories();
         }
 
         if (! Schema::hasTable(config('addressable.tables.addresses', 'addresses'))) {
@@ -107,53 +61,29 @@ return new class extends Migration
                 $table->softDeletes();
             });
         }
+
+        if (DB::table(app(AddressGender::class)->getTable())->first() === null) {
+            Artisan::call('db:seed', [
+                '--class' => LaravelAddressableProductionTableSeeder::class,
+            ]);
+        }
     }
 
-    private function addGenders(): void
+    /**
+     * Reverse the migrations.
+     *
+     * TODO: Delete the method before the PR goes into the master
+     *
+     * @return void
+     */
+    public function down()
     {
-        $now = now();
-        $genders = [
-            [
-                'title_translation_key' => 'address_genders.title.male',
-                'created_at' => $now,
-                'updated_at' => $now,
-            ],
-            [
-                'title_translation_key' => 'address_genders.title.female',
-                'created_at' => $now,
-                'updated_at' => $now,
-            ],
-            [
-                'title_translation_key' => 'address_genders.title.diverse',
-                'created_at' => $now,
-                'updated_at' => $now,
-            ],
-        ];
+        if (app()->environment('staging', 'production')) {
+            return;
+        }
 
-        AddressGender::insert($genders);
-    }
-
-    private function addCategories(): void
-    {
-        $now = now();
-        $categories = [
-            [
-                'title_translation_key' => 'address_categories.title.standard',
-                'created_at' => $now,
-                'updated_at' => $now,
-            ],
-            [
-                'title_translation_key' => 'address_categories.title.billing',
-                'created_at' => $now,
-                'updated_at' => $now,
-            ],
-            [
-                'title_translation_key' => 'address_categories.title.shipping',
-                'created_at' => $now,
-                'updated_at' => $now,
-            ],
-        ];
-
-        AddressCategory::insert($categories);
+        Schema::dropIfExists(config('addressable.tables.address_genders', 'address_genders'));
+        Schema::dropIfExists(config('addressable.tables.address_categories', 'address_categories'));
+        Schema::dropIfExists(config('addressable.tables.addresses', 'addresses'));
     }
 };
