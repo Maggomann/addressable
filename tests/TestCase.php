@@ -3,11 +3,14 @@
 namespace Maggomann\LaravelAddressable\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
 use Maggomann\LaravelAddressable\LaravelAddressableServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
+    use LazilyRefreshDatabase;
+
     protected function setUp(): void
     {
         parent::setUp();
@@ -22,15 +25,5 @@ class TestCase extends Orchestra
         return [
             LaravelAddressableServiceProvider::class,
         ];
-    }
-
-    public function getEnvironmentSetUp($app)
-    {
-        config()->set('database.default', 'testing');
-
-        /*
-        $migration = include __DIR__.'/../database/migrations/create_laravel-addressable_table.php.stub';
-        $migration->up();
-        */
     }
 }
