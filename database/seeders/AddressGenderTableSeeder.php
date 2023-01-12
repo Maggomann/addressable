@@ -1,6 +1,6 @@
 <?php
 
-namespace Maggomann\LaravelAddressable\Database\Factories;
+namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Maggomann\LaravelAddressable\Models\AddressGender;

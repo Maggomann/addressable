@@ -1,14 +1,12 @@
 <?php
 
 use Maggomann\LaravelAddressable\Tests\TestCase;
-
-// use Illuminate\Database\Eloquent\Model;
-
-// expect()->extend('toBeSameModel', function (Model $model) {
-//     return $this
-//         ->is($model)->toBeTrue();
-// });
+use Maggomann\LaravelAddressable\Tests\TestCases\DB\TestCase as DBTestCase;
 
 uses(TestCase::class)->in(
     __DIR__.'/Commands',
+);
+
+uses(DBTestCase::class)->in(
+    __DIR__.'/Traits',
 );

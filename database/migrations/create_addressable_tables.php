@@ -1,11 +1,11 @@
 <?php
 
+use Database\Seeders\LaravelAddressableProductionTableSeeder;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
-use Maggomann\LaravelAddressable\Database\Factories\LaravelAddressableProductionTableSeeder;
 use Maggomann\LaravelAddressable\Models\AddressGender;
 
 return new class extends Migration
