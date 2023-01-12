@@ -22,7 +22,7 @@ class LaravelAddressableServiceProvider extends PackageServiceProvider
             ->hasTranslations();
     }
 
-    public function packageBooted()
+    public function packageBooted(): void
     {
         if ($this->package->hasTranslations) {
             $this->publishes([
