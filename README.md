@@ -1,4 +1,4 @@
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/Maggomann/laravel-addressable/run-tests.yml?branch%3Av0.x&label=tests)](https://github.com/Maggomann/laravel-addressable/actions?query=workflow%3Arun-tests+branch%3Av0.x)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/Maggomann/laravel-addressable/run-tests.yml?branch%3Av0.x&label=tests)](https://github.com/Maggomann/laravel-addressable/actions?query=workflow%3Arun-tests+branch%3beta)
 
 ---
 
