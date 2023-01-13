@@ -9,4 +9,5 @@ uses(TestCase::class)->in(
 
 uses(DBTestCase::class)->in(
     __DIR__.'/Traits',
+    __DIR__.'/Models',
 );

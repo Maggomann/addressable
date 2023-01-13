@@ -8,7 +8,7 @@ it('return an enpty adresses collection when eloquent has no addresses', functio
     $this->assertEmpty($user->addresses);
 });
 
-it('return an enpty adresses collection when eloquent has no address', function () {
+it('return an enpty adress collection when eloquent has no address', function () {
     $user = UserFactory::new()->create();
 
     $this->assertEmpty($user->address);
