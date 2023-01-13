@@ -64,8 +64,7 @@ it('can save an addresses', function () {
                     'id' => $address->id,
                     'addressable_id' => $user->id,
                     'addressable_type' => User::class,
-                ])
-                );
+                ]));
         }
     );
 });

@@ -1,6 +1,6 @@
 {
     "name": "maggomann/laravel-addressable",
-    "description": "This is my package laravel-addressable",
+    "description": "This Laravel package provides a minimal trait Addressable to add eloquent models using these addresses.",
     "license": "MIT",
     "keywords": [
         "maggomann",

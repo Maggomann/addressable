@@ -1,6 +1,5 @@
 <?php
 
-// config for Maggomann/LaravelAddressable
 return [
 
     /*
@@ -51,7 +50,6 @@ return [
             'street_addition' => 'Straßenzusatz',
             'postal_code' => 'Postleitzahl',
             'city' => 'Stadt',
-            'street_addition' => 'Straßenzusatz',
             'country_code' => 'Land',
             'state' => 'Bundeland',
             'company' => 'Firma',
