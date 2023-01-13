@@ -60,10 +60,7 @@
         "laravel": {
             "providers": [
                 "Maggomann\\LaravelAddressable\\LaravelAddressableServiceProvider"
-            ],
-            "aliases": {
-                "LaravelAddressable": "Maggomann\\LaravelAddressable\\Facades\\LaravelAddressable"
-            }
+            ]
         }
     },
     "scripts": {

@@ -29,13 +29,5 @@ class LaravelAddressableServiceProvider extends PackageServiceProvider
                 $this->package->basePath('/../resources/lang') => resource_path('lang/'),
             ], "{$this->package->shortName()}-filament-translations");
         }
-
-        // $this->publishes([
-        //     $this->package->basePath('/../database/factories') => database_path('factories/'),
-        // ], "{$this->package->shortName()}-factories");
-
-        // $this->publishes([
-        //     $this->package->basePath('/../database/seeders') => database_path('seeders/'),
-        // ], "{$this->package->shortName()}-seeders");
     }
 }
