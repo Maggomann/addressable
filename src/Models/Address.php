@@ -4,6 +4,7 @@ namespace Maggomann\LaravelAddressable\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -79,5 +80,37 @@ class Address extends Model
     public function addressable(): MorphTo
     {
         return $this->morphTo();
+    }
+
+    /**
+     * @throws ModelNotFoundException
+     */
+    public function withCategory(AddressCategory|int $addressCategory): self
+    {
+        if ($addressCategory instanceof AddressCategory) {
+            $this->category_id = $addressCategory->id;
+
+            return $this;
+        }
+
+        $this->category_id = AddressCategory::query()->findOrFail($addressCategory)->id;
+
+        return $this;
+    }
+
+    /**
+     * @throws ModelNotFoundException
+     */
+    public function withGender(AddressGender|int $addressGender): self
+    {
+        if ($addressGender instanceof AddressGender) {
+            $this->gender_id = $addressGender->id;
+
+            return $this;
+        }
+
+        $this->gender_id = AddressGender::query()->findOrFail($addressGender)->id;
+
+        return $this;
     }
 }
