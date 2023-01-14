@@ -7,22 +7,103 @@ This package is still under development. Use at your own risk.
 
 ## laravel addressable
 
-This Laravel package provides a minimal trait Addressable to add eloquent models using these addresses.
+This Laravel package provides a minimal trait Addressable to add eloquent models using these addresses. The package will be extended over time. It was directly outsourced as a package before I start using this class modified in different projects.
+
+## Installation
+
+You can install anything with the command
+
+```bash
+php artisan laravel-addressable:install
+php artisan migrate
+```
+
+Or
+
+---
+
+You can publish and run the migrations with:
+
+```bash
+php artisan vendor:publish --tag="addressable-migrations"
+php artisan migrate
+```
+
+Optionally, you can publish the configuration file with:
+
+```bash
+php artisan vendor:publish --tag="addressable-config"
+```
+
+Optionally, you can publish the translation files with:
+
+```bash
+php artisan vendor:publish --tag="addressable-translations"
+```
 
 ## How is it used?
 
 ```php
+
+use Illuminate\Database\Eloquent\Model;
+use Maggomann\LaravelAddressable\Traits\Addressable;
+
+class Player extends Models
+{
+    use Addressable;
+}
+
+//...
+//...
+
 $address = new Address();
 $address->fill($addressData);
+$address->withCategory($categoryIdOrCategoryClass);
+$address->withGender($genderIdOrGenderClass);
 
-$user->address()->save($address);
+Player::query()
+    ->findOrFail(1)
+    ->address()
+    ->save($address);
+
 ```
 
 ```php
-$address = new Address();
-$address->fill($addressData);
+use Illuminate\Database\Eloquent\Model;
+use Maggomann\LaravelAddressable\Traits\Addressable;
 
-$user->addresses()->save($address);
+class Player extends Models
+{
+    use Addressable;
+}
+
+//...
+//...
+
+$addressOne = new Address();
+$addressOne->fill($addressData);
+$addressOne->withCategory($categoryIdOrCategoryClass);
+$addressOne->withGender($genderIdOrGenderClass);
+
+$addressTwo = new Address();
+$addressTwo->fill($addressData);
+$addressTwo->withCategory($categoryIdOrCategoryClass);
+$addressTwo->withGender($genderIdOrGenderClass);
+
+$player = Player::query()->findOrFail(1);
+
+$player->addresses()->save($addressOne);
+$player->addresses()->save($addressTwo);
+
+// or
+
+$player->addresses()->saveMany(
+    collect([
+        $addressOne,
+        $addressTwo,
+    ])
+);
+
 ```
 
 ### The address table currently comes with the following attributes:
