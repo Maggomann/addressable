@@ -56,8 +56,24 @@ class Player extends Models
 //...
 //...
 
+$exampleAttributes = [
+    'first_name' => 'first name',
+    'last_name' => 'last name',
+    'name' => 'name',
+    'street_address' => 'street address',
+    'street_addition' => 'street addition',
+    'postal_code' => 'postal code',
+    'city' => 'city',
+    'country_code' => 'de',
+    'state' => null,
+    'company' => null,
+    'job_title' => null,
+    'is_preferred' => true,
+    'is_main' => true,
+];
+
 $address = new Address();
-$address->fill($addressData);
+$address->fill($exampleAttributes);
 $address->withCategory($categoryIdOrCategoryClass);
 $address->withGender($genderIdOrGenderClass);
 
@@ -80,13 +96,29 @@ class Player extends Models
 //...
 //...
 
+$exampleAttributes = [
+    'first_name' => 'first name',
+    'last_name' => 'last name',
+    'name' => 'name',
+    'street_address' => 'street address',
+    'street_addition' => 'street addition',
+    'postal_code' => 'postal code',
+    'city' => 'city',
+    'country_code' => 'de',
+    'state' => null,
+    'company' => null,
+    'job_title' => null,
+    'is_preferred' => true,
+    'is_main' => true,
+];
+
 $addressOne = new Address();
-$addressOne->fill($addressData);
+$addressOne->fill($exampleAttributes);
 $addressOne->withCategory($categoryIdOrCategoryClass);
 $addressOne->withGender($genderIdOrGenderClass);
 
 $addressTwo = new Address();
-$addressTwo->fill($addressData);
+$addressTwo->fill($exampleAttributes);
 $addressTwo->withCategory($categoryIdOrCategoryClass);
 $addressTwo->withGender($genderIdOrGenderClass);
 
