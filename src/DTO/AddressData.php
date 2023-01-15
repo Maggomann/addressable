@@ -8,9 +8,9 @@ class AddressData extends Data
 {
     public function __construct(
         public int $category_id,
-        public int $gender_id,
-        public string $first_name,
-        public string $last_name,
+        public null|int $gender_id,
+        public null|string $first_name,
+        public null|string $last_name,
         public null|string $name,
         public string $street_address,
         public null|string $street_addition,

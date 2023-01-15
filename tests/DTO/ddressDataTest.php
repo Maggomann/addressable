@@ -25,14 +25,14 @@ beforeEach(function () {
     ];
 });
 
-it('returns a PlayerAddressData when valid data is submitted', function () {
+it('returns a AddressData when valid data is submitted', function () {
     $data = AddressData::from($this->validParams);
 
     $this->assertInstanceOf(AddressData::class, $data);
     $this->assertInstanceOf(AddressData::class, $data);
 });
 
-test('PlayerAddressData throws an error when invalid data is submitted', function ($key, $value) {
+test('AddressData throws an error when invalid data is submitted', function ($key, $value) {
     $this->expectException(TypeError::class);
 
     AddressData::from(
@@ -41,8 +41,8 @@ test('PlayerAddressData throws an error when invalid data is submitted', functio
 })->with([
     ['gender_id', 'invalid'],
     ['category_id', 'invalid'],
-    ['first_name', null],
-    ['last_name', null],
+    ['first_name', []],
+    ['last_name', [null]],
     ['name', []],
     ['street_address', null],
     ['street_addition', []],
