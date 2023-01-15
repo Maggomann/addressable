@@ -28,7 +28,7 @@ class UpdateOrCreateAddressAction
         });
     }
 
-    public function makeAddress(AddressData $addressData, ?Address $address = null): Address
+    private function makeAddress(AddressData $addressData, ?Address $address = null): Address
     {
         if (is_null($address)) {
             $address = new Address();
@@ -41,7 +41,7 @@ class UpdateOrCreateAddressAction
         return $address;
     }
 
-    public function firstOrCreateAddress(?Address $address = null): self
+    private function firstOrCreateAddress(?Address $address = null): self
     {
         $address = $this->makeAddress($this->addressData, $address);
 
@@ -53,7 +53,7 @@ class UpdateOrCreateAddressAction
     /**
      * @throws ModelNotFoundException
      */
-    public function address(): Address
+    private function address(): Address
     {
         return $this->model->address()->firstOrFail();
     }
