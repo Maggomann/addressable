@@ -2,9 +2,9 @@
 
 namespace Maggomann\LaravelAddressable\Tests\Database\Factories;
 
-use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Maggomann\LaravelAddressable\Models\Address;
+use Maggomann\LaravelAddressable\Tests\TestClasses\User;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Maggomann\LaravelAddressable\Models\Address>
