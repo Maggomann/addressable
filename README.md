@@ -1,4 +1,4 @@
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/Maggomann/laravel-addressable/run-tests.yml?branch%3Av0.x&label=tests)](https://github.com/Maggomann/laravel-addressable/actions?query=workflow%3Arun-tests+branch%3v0.x) [![Total Downloads](https://img.shields.io/packagist/dt/maggomann/laravel-addressable.svg?style=flat-square)](https://packagist.org/packages/maggomann/laravel-addressable)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/Maggomann/laravel-addressable/run-tests.yml?branch%3Av0.x&label=tests)](https://github.com/Maggomann/laravel-addressable/actions?query=workflow%3Arun-tests+branch%3Av0.x) [![Total Downloads](https://img.shields.io/packagist/dt/maggomann/laravel-addressable.svg?style=flat-square)](https://packagist.org/packages/maggomann/laravel-addressable)
 
 ---
 
