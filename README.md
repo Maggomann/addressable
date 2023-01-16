@@ -1,4 +1,4 @@
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/Maggomann/laravel-addressable/run-tests.yml?branch%3Av0.x&label=tests)](https://github.com/Maggomann/laravel-addressable/actions?query=workflow%3Arun-tests+branch%3beta)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/Maggomann/laravel-addressable/run-tests.yml?branch%3Av0.x&label=tests)](https://github.com/Maggomann/laravel-addressable/actions?query=workflow%3Arun-tests+branch%3beta) [![Total Downloads](https://img.shields.io/packagist/dt/maggomann/laravel-addressable.svg?style=flat-square)](https://packagist.org/packages/maggomann/laravel-addressable)
 
 ---
 
@@ -10,6 +10,12 @@ This package is still under development. Use at your own risk.
 This Laravel package provides a minimal trait Addressable to add eloquent models using these addresses. The package will be extended over time. It was directly outsourced as a package before I start using this class modified in different projects.
 
 ## Installation
+
+You can install the package via composer:
+
+```console
+composer require maggomann/laravel-addressable
+```
 
 You can install anything with the command
 
