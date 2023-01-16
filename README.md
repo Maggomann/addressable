@@ -138,6 +138,50 @@ $player->addresses()->saveMany(
 
 ```
 
+```php
+use Illuminate\Database\Eloquent\Model;
+use Maggomann\LaravelAddressable\Domain\Actions\UpdateOrCreateAddressAction;
+use Maggomann\LaravelAddressable\Traits\Addressable;
+
+class Player extends Models
+{
+    use Addressable;
+}
+
+//...
+//...
+
+$exampleAttributes = [
+    'first_name' => 'first name',
+    'last_name' => 'last name',
+    'name' => 'name',
+    'street_address' => 'street address',
+    'street_addition' => 'street addition',
+    'postal_code' => 'postal code',
+    'city' => 'city',
+    'country_code' => 'de',
+    'state' => null,
+    'company' => null,
+    'job_title' => null,
+    'is_preferred' => true,
+    'is_main' => true,
+];
+
+$newAddress = app(UpdateOrCreateAddressAction::class)->execute(
+    $player,
+    AddressData::from($exampleAttributes)
+);
+
+// or
+
+$updatedAddress = app(UpdateOrCreateAddressAction::class)->execute(
+    $player,
+    AddressData::from($exampleAttributes)
+    $player->addresses()->first()
+);
+
+```
+
 ### The address table currently comes with the following attributes:
 
 ```php
