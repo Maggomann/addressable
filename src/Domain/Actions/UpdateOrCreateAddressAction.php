@@ -1,11 +1,11 @@
 <?php
 
-namespace Maggomann\LaravelAddressable\Actions;
+namespace Maggomann\LaravelAddressable\Domain\Actions;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\DB;
-use Maggomann\LaravelAddressable\DTO\AddressData;
+use Maggomann\LaravelAddressable\Domain\DTO\AddressData;
 use Maggomann\LaravelAddressable\Models\Address;
 
 class UpdateOrCreateAddressAction

@@ -1,7 +1,7 @@
 <?php
 
-use Maggomann\LaravelAddressable\Actions\UpdateOrCreateAddressAction;
-use Maggomann\LaravelAddressable\DTO\AddressData;
+use Maggomann\LaravelAddressable\Domain\Actions\UpdateOrCreateAddressAction;
+use Maggomann\LaravelAddressable\Domain\DTO\AddressData;
 use Maggomann\LaravelAddressable\Models\Address;
 use Maggomann\LaravelAddressable\Tests\Database\Factories\AddressFactory;
 use Maggomann\LaravelAddressable\Tests\Database\Factories\UserFactory;

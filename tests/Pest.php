@@ -9,8 +9,8 @@ uses(TestCase::class)->in(
 );
 
 uses(LaravelDataTestCase::class)->in(
-    __DIR__.'/Actions',
-    __DIR__.'/DTO',
+    __DIR__.'/Domain/Actions',
+    __DIR__.'/Domain/DTO',
 );
 
 uses(DBTestCase::class)->in(

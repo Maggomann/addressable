@@ -1,6 +1,6 @@
 <?php
 
-namespace Maggomann\LaravelAddressable\DTO;
+namespace Maggomann\LaravelAddressable\Domain\DTO;
 
 use Spatie\LaravelData\Data;
 
