@@ -6,6 +6,10 @@ All notable changes to `laravel-addressable` will be documented in this file.
 
 **Full Changelog**: https://github.com/Maggomann/laravel-addressable/compare/v0.1.1...v0.1.2
 
-## 1.0.0 - 202X-XX-XX
+## v0.1.1 - 2023-01-17
 
-- initial release
+**Full Changelog**: https://github.com/Maggomann/laravel-addressable/compare/v0.1.0...v0.1.1
+
+## v0.1.0 - 2023-01-16
+
+**Full Changelog**: https://github.com/Maggomann/laravel-addressable/commits/v0.1.0
