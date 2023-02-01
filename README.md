@@ -2,12 +2,9 @@
 
 ---
 
-## Work in progress (wip)
-This package is still under development. Use at your own risk.
-
 ## laravel addressable
 
-This Laravel package provides a minimal trait Addressable to add eloquent models using these addresses. The package will be extended over time. It was directly outsourced as a package before I start using this class modified in different projects.
+This package provides a minimal trait Addressable to add eloquent models using these addresses for laraval. The package will be extended over time. It was directly outsourced as a package before I start using this class modified in different projects.
 
 ## Installation
 
