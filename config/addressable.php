@@ -1,6 +1,6 @@
 <?php
 
-// config for Maggomann/LaravelAddressable
+// config for Maggomann/Addressable
 return [
 
     // Addresses Database Tables

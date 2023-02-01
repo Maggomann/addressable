@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Maggomann\LaravelAddressable\Models\AddressGender;
+use Maggomann\Addressable\Models\AddressGender;
 
 class AddressGenderTableSeeder extends Seeder
 {

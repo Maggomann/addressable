@@ -1,6 +1,6 @@
 <?php
 
-use Maggomann\LaravelAddressable\Models\AddressCategory;
+use Maggomann\Addressable\Models\AddressCategory;
 
 it('has the default category entries', function ($translationKey) {
     $this->assertDatabaseHas(AddressCategory::class, [

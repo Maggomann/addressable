@@ -1,6 +1,6 @@
 <?php
 
-namespace Maggomann\LaravelAddressable\Models;
+namespace Maggomann\Addressable\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

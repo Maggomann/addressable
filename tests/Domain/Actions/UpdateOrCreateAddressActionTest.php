@@ -1,10 +1,10 @@
 <?php
 
-use Maggomann\LaravelAddressable\Domain\Actions\UpdateOrCreateAddressAction;
-use Maggomann\LaravelAddressable\Domain\DTO\AddressData;
-use Maggomann\LaravelAddressable\Models\Address;
-use Maggomann\LaravelAddressable\Tests\Database\Factories\AddressFactory;
-use Maggomann\LaravelAddressable\Tests\Database\Factories\UserFactory;
+use Maggomann\Addressable\Domain\Actions\UpdateOrCreateAddressAction;
+use Maggomann\Addressable\Domain\DTO\AddressData;
+use Maggomann\Addressable\Models\Address;
+use Maggomann\Addressable\Tests\Database\Factories\AddressFactory;
+use Maggomann\Addressable\Tests\Database\Factories\UserFactory;
 
 dataset('UpdateOrCreateAddresses', function () {
     yield fn () => AddressData::from([

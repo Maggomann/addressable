@@ -1,11 +1,11 @@
 <?php
 
-use Maggomann\LaravelAddressable\Models\Address;
-use Maggomann\LaravelAddressable\Models\AddressCategory;
-use Maggomann\LaravelAddressable\Models\AddressGender;
-use Maggomann\LaravelAddressable\Tests\Database\Factories\AddressFactory;
-use Maggomann\LaravelAddressable\Tests\Database\Factories\UserFactory;
-use Maggomann\LaravelAddressable\Tests\TestClasses\User;
+use Maggomann\Addressable\Models\Address;
+use Maggomann\Addressable\Models\AddressCategory;
+use Maggomann\Addressable\Models\AddressGender;
+use Maggomann\Addressable\Tests\Database\Factories\AddressFactory;
+use Maggomann\Addressable\Tests\Database\Factories\UserFactory;
+use Maggomann\Addressable\Tests\TestClasses\User;
 
 it('can save an address', function () {
     $address = new Address();

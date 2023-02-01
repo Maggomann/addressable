@@ -1,6 +1,6 @@
 <?php
 
-use Maggomann\LaravelAddressable\Models\AddressGender;
+use Maggomann\Addressable\Models\AddressGender;
 
 it('has the default gender entries', function ($translationKey) {
     $this->assertDatabaseHas(AddressGender::class, [

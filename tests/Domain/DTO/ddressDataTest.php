@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Arr;
-use Maggomann\LaravelAddressable\Domain\DTO\AddressData;
+use Maggomann\Addressable\Domain\DTO\AddressData;
 
 beforeEach(function () {
     $this->validParams = [

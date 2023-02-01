@@ -1,8 +1,8 @@
 <?php
 
-use Maggomann\LaravelAddressable\Tests\TestCase;
-use Maggomann\LaravelAddressable\Tests\TestCases\DB\TestCase as DBTestCase;
-use Maggomann\LaravelAddressable\Tests\TestCases\LaravelData\TestCase as LaravelDataTestCase;
+use Maggomann\Addressable\Tests\TestCase;
+use Maggomann\Addressable\Tests\TestCases\DB\TestCase as DBTestCase;
+use Maggomann\Addressable\Tests\TestCases\LaravelData\TestCase as LaravelDataTestCase;
 
 uses(TestCase::class)->in(
     __DIR__.'/Commands',

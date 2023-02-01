@@ -1,10 +1,10 @@
 <?php
 
-namespace Maggomann\LaravelAddressable\Traits;
+namespace Maggomann\Addressable\Traits;
 
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
-use Maggomann\LaravelAddressable\Models\Address;
+use Maggomann\Addressable\Models\Address;
 
 trait Addressable
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Maggomann\LaravelAddressable\Tests\TestCases\LaravelData;
+namespace Maggomann\Addressable\Tests\TestCases\LaravelData;
 
 use Illuminate\Foundation\Testing\LazilyRefreshDatabase;
-use Maggomann\LaravelAddressable\LaravelAddressableServiceProvider;
+use Maggomann\Addressable\AddressableServiceProvider;
 use Orchestra\Testbench\TestCase as BaseTestCase;
 use Spatie\LaravelData\LaravelDataServiceProvider;
 
@@ -19,7 +19,7 @@ abstract class TestCase extends BaseTestCase
     protected function getPackageProviders($app)
     {
         return [
-            LaravelAddressableServiceProvider::class,
+            AddressableServiceProvider::class,
             LaravelDataServiceProvider::class,
         ];
     }

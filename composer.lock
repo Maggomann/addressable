@@ -63,16 +63,16 @@
             "time": "2022-08-10T22:54:19+00:00"
         },
         {
-            "name": "dcblogdev/laravel-countries",
+            "name": "dcblogdev/me-countries",
             "version": "v2.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/dcblogdev/laravel-countries.git",
+                "url": "https://github.com/dcblogdev/me-countries.git",
                 "reference": "622a28bd705c56cc0863067ee1a8c81e5266182d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dcblogdev/laravel-countries/zipball/622a28bd705c56cc0863067ee1a8c81e5266182d",
+                "url": "https://api.github.com/repos/dcblogdev/me-countries/zipball/622a28bd705c56cc0863067ee1a8c81e5266182d",
                 "reference": "622a28bd705c56cc0863067ee1a8c81e5266182d",
                 "shasum": ""
             },
@@ -104,14 +104,14 @@
                 }
             ],
             "description": "A Laravel countries list package",
-            "homepage": "https://github.com/dcblogdev/laravel-countries",
+            "homepage": "https://github.com/dcblogdev/me-countries",
             "keywords": [
                 "countries",
                 "laravel"
             ],
             "support": {
-                "issues": "https://github.com/dcblogdev/laravel-countries/issues",
-                "source": "https://github.com/dcblogdev/laravel-countries/tree/v2.0.0"
+                "issues": "https://github.com/dcblogdev/me-countries/issues",
+                "source": "https://github.com/dcblogdev/me-countries/tree/v2.0.0"
             },
             "funding": [
                 {
@@ -2257,16 +2257,16 @@
             "time": "2023-01-12T18:13:24+00:00"
         },
         {
-            "name": "spatie/laravel-data",
+            "name": "spatie/me-data",
             "version": "2.2.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/spatie/laravel-data.git",
+                "url": "https://github.com/spatie/me-data.git",
                 "reference": "a9446a85e8b09cdb26f095e4d99c25a7cc19358d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-data/zipball/a9446a85e8b09cdb26f095e4d99c25a7cc19358d",
+                "url": "https://api.github.com/repos/spatie/me-data/zipball/a9446a85e8b09cdb26f095e4d99c25a7cc19358d",
                 "reference": "a9446a85e8b09cdb26f095e4d99c25a7cc19358d",
                 "shasum": ""
             },
@@ -2274,7 +2274,7 @@
                 "illuminate/contracts": "^8.83|^9.30",
                 "php": "^8.1",
                 "phpdocumentor/type-resolver": "^1.5",
-                "spatie/laravel-package-tools": "^1.9.0"
+                "spatie/me-package-tools": "^1.9.0"
             },
             "require-dev": {
                 "fakerphp/faker": "^1.14",
@@ -2289,7 +2289,7 @@
                 "phpstan/extension-installer": "^1.1",
                 "phpunit/phpunit": "^9.3",
                 "spatie/invade": "^1.0",
-                "spatie/laravel-typescript-transformer": "^2.1.6",
+                "spatie/me-typescript-transformer": "^2.1.6",
                 "spatie/pest-plugin-snapshots": "^1.1",
                 "spatie/phpunit-snapshot-assertions": "^4.2",
                 "spatie/test-time": "^1.2"
@@ -2320,15 +2320,15 @@
                 }
             ],
             "description": "Create unified resources and data transfer objects",
-            "homepage": "https://github.com/spatie/laravel-data",
+            "homepage": "https://github.com/spatie/me-data",
             "keywords": [
                 "laravel",
-                "laravel-data",
+                "me-data",
                 "spatie"
             ],
             "support": {
-                "issues": "https://github.com/spatie/laravel-data/issues",
-                "source": "https://github.com/spatie/laravel-data/tree/2.2.2"
+                "issues": "https://github.com/spatie/me-data/issues",
+                "source": "https://github.com/spatie/me-data/tree/2.2.2"
             },
             "funding": [
                 {
@@ -2339,16 +2339,16 @@
             "time": "2023-01-06T10:18:22+00:00"
         },
         {
-            "name": "spatie/laravel-package-tools",
+            "name": "spatie/me-package-tools",
             "version": "1.14.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/spatie/laravel-package-tools.git",
+                "url": "https://github.com/spatie/me-package-tools.git",
                 "reference": "9964e65c318c30577ca1b91469f739d2b381359b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/9964e65c318c30577ca1b91469f739d2b381359b",
+                "url": "https://api.github.com/repos/spatie/me-package-tools/zipball/9964e65c318c30577ca1b91469f739d2b381359b",
                 "reference": "9964e65c318c30577ca1b91469f739d2b381359b",
                 "shasum": ""
             },
@@ -2381,14 +2381,14 @@
                 }
             ],
             "description": "Tools for creating Laravel packages",
-            "homepage": "https://github.com/spatie/laravel-package-tools",
+            "homepage": "https://github.com/spatie/me-package-tools",
             "keywords": [
-                "laravel-package-tools",
+                "me-package-tools",
                 "spatie"
             ],
             "support": {
-                "issues": "https://github.com/spatie/laravel-package-tools/issues",
-                "source": "https://github.com/spatie/laravel-package-tools/tree/1.14.0"
+                "issues": "https://github.com/spatie/me-package-tools/issues",
+                "source": "https://github.com/spatie/me-package-tools/tree/1.14.0"
             },
             "funding": [
                 {
@@ -5483,7 +5483,7 @@
                 "mockery/mockery": "^1.4.4",
                 "nunomaduro/collision": "^6.1",
                 "phpunit/phpunit": "^9.5.10",
-                "spatie/laravel-ignition": "^1.0"
+                "spatie/me-ignition": "^1.0"
             },
             "type": "project",
             "extra": {
@@ -5536,7 +5536,7 @@
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "~3.13.1",
                 "illuminate/view": "^9.32.0",
-                "laravel-zero/framework": "^9.2.0",
+                "me-zero/framework": "^9.2.0",
                 "mockery/mockery": "^1.5.1",
                 "nunomaduro/larastan": "^2.2.0",
                 "nunomaduro/termwind": "^1.14.0",
@@ -5962,7 +5962,7 @@
                 "error",
                 "handling",
                 "laravel",
-                "laravel-zero",
+                "me-zero",
                 "php",
                 "symfony"
             ],
@@ -6103,7 +6103,7 @@
                 "orchestra/testbench-core": "^7.19",
                 "php": "^8.0",
                 "phpunit/phpunit": "^9.5.10",
-                "spatie/laravel-ray": "^1.28",
+                "spatie/me-ray": "^1.28",
                 "symfony/process": "^6.0.9",
                 "symfony/yaml": "^6.0.9",
                 "vlucas/phpdotenv": "^5.4.1"
@@ -6167,7 +6167,7 @@
                 "orchestra/canvas": "^7.0",
                 "phpstan/phpstan": "^1.8",
                 "phpunit/phpunit": "^9.5.10",
-                "spatie/laravel-ray": "^1.28",
+                "spatie/me-ray": "^1.28",
                 "symfony/process": "^6.0.9",
                 "symfony/yaml": "^6.0.9",
                 "vlucas/phpdotenv": "^5.4.1"
@@ -8645,16 +8645,16 @@
             "time": "2021-11-09T10:57:15+00:00"
         },
         {
-            "name": "spatie/laravel-ray",
+            "name": "spatie/me-ray",
             "version": "1.32.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/spatie/laravel-ray.git",
+                "url": "https://github.com/spatie/me-ray.git",
                 "reference": "05fc99dba671c5d7478cb0400fe7152d7f00712e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-ray/zipball/05fc99dba671c5d7478cb0400fe7152d7f00712e",
+                "url": "https://api.github.com/repos/spatie/me-ray/zipball/05fc99dba671c5d7478cb0400fe7152d7f00712e",
                 "reference": "05fc99dba671c5d7478cb0400fe7152d7f00712e",
                 "shasum": ""
             },
@@ -8708,14 +8708,14 @@
                 }
             ],
             "description": "Easily debug Laravel apps",
-            "homepage": "https://github.com/spatie/laravel-ray",
+            "homepage": "https://github.com/spatie/me-ray",
             "keywords": [
-                "laravel-ray",
+                "me-ray",
                 "spatie"
             ],
             "support": {
-                "issues": "https://github.com/spatie/laravel-ray/issues",
-                "source": "https://github.com/spatie/laravel-ray/tree/1.32.0"
+                "issues": "https://github.com/spatie/me-ray/issues",
+                "source": "https://github.com/spatie/me-ray/tree/1.32.0"
             },
             "funding": [
                 {

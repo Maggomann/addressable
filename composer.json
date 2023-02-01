@@ -1,11 +1,11 @@
 {
-    "name": "maggomann/laravel-addressable",
+    "name": "maggomann/addressable",
     "description": "This Laravel package provides a minimal trait Addressable to add eloquent models using these addresses.",
     "license": "MIT",
     "keywords": [
         "maggomann",
         "laravel",
-        "laravel-addressable"
+        "addressable"
     ],
     "authors": [
         {
@@ -14,13 +14,13 @@
             "role": "Developer"
         }
     ],
-    "homepage": "https://github.com/maggomann/laravel-addressable",
+    "homepage": "https://github.com/maggomann/addressable",
     "require": {
         "php": "^8.1",
-        "dcblogdev/laravel-countries": "^2.0",
+        "dcblogdev/me-countries": "^2.0",
         "illuminate/contracts": "^9.0",
-        "spatie/laravel-data": "^2.2",
-        "spatie/laravel-package-tools": "^1.9.2"
+        "spatie/me-data": "^2.2",
+        "spatie/me-package-tools": "^1.9.2"
     },
     "require-dev": {
         "laravel/laravel": "^9.3",
@@ -39,15 +39,15 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Maggomann\\LaravelAddressable\\": "src",
+            "Maggomann\\Addressable\\": "src",
             "Database\\Factories\\": "database/factories",
             "Database\\Seeders\\": "database/seeders"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Maggomann\\LaravelAddressable\\Tests\\": "tests",
-            "Maggomann\\LaravelAddressable\\Tests\\Database\\Factories\\": "tests/database/factories"
+            "Maggomann\\Addressable\\Tests\\": "tests",
+            "Maggomann\\Addressable\\Tests\\Database\\Factories\\": "tests/database/factories"
         }
     },
     "config": {
@@ -60,7 +60,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Maggomann\\LaravelAddressable\\LaravelAddressableServiceProvider"
+                "Maggomann\\Addressable\\AddressableServiceProvider"
             ]
         }
     },

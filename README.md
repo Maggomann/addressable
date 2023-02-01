@@ -1,4 +1,4 @@
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/Maggomann/laravel-addressable/run-tests.yml?branch%3Av0.x&label=tests)](https://github.com/Maggomann/laravel-addressable/actions?query=workflow%3Arun-tests+branch%3Av0.x) [![Total Downloads](https://img.shields.io/packagist/dt/maggomann/laravel-addressable.svg?style=flat-square)](https://packagist.org/packages/maggomann/laravel-addressable)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/Maggomann/addressable/run-tests.yml?branch%3Av0.x&label=tests)](https://github.com/Maggomann/addressable/actions?query=workflow%3Arun-tests+branch%3Av0.x) [![Total Downloads](https://img.shields.io/packagist/dt/maggomann/addressable.svg?style=flat-square)](https://packagist.org/packages/maggomann/addressable)
 
 ---
 
@@ -14,13 +14,13 @@ This Laravel package provides a minimal trait Addressable to add eloquent models
 You can install the package via composer:
 
 ```console
-composer require maggomann/laravel-addressable
+composer require maggomann/addressable
 ```
 
 You can install anything with the command
 
 ```bash
-php artisan laravel-addressable:install
+php artisan addressable:install
 php artisan migrate
 ```
 
@@ -52,7 +52,7 @@ php artisan vendor:publish --tag="addressable-translations"
 ```php
 
 use Illuminate\Database\Eloquent\Model;
-use Maggomann\LaravelAddressable\Traits\Addressable;
+use Maggomann\Addressable\Traits\Addressable;
 
 class Player extends Models
 {
@@ -92,7 +92,7 @@ Player::query()
 
 ```php
 use Illuminate\Database\Eloquent\Model;
-use Maggomann\LaravelAddressable\Traits\Addressable;
+use Maggomann\Addressable\Traits\Addressable;
 
 class Player extends Models
 {
@@ -146,8 +146,8 @@ $player->addresses()->saveMany(
 
 ```php
 use Illuminate\Database\Eloquent\Model;
-use Maggomann\LaravelAddressable\Domain\Actions\UpdateOrCreateAddressAction;
-use Maggomann\LaravelAddressable\Traits\Addressable;
+use Maggomann\Addressable\Domain\Actions\UpdateOrCreateAddressAction;
+use Maggomann\Addressable\Traits\Addressable;
 
 class Player extends Models
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Maggomann\LaravelAddressable\Tests\TestClasses;
+namespace Maggomann\Addressable\Tests\TestClasses;
 
 use Illuminate\Foundation\Auth\User as BaseUser;
-use Maggomann\LaravelAddressable\Traits\Addressable;
+use Maggomann\Addressable\Traits\Addressable;
 
 class User extends BaseUser
 {

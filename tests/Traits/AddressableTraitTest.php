@@ -1,6 +1,6 @@
 <?php
 
-use Maggomann\LaravelAddressable\Tests\Database\Factories\UserFactory;
+use Maggomann\Addressable\Tests\Database\Factories\UserFactory;
 
 it('return an enpty adresses collection when eloquent has no addresses', function () {
     $user = UserFactory::new()->create();

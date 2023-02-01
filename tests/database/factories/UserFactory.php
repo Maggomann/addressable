@@ -1,20 +1,20 @@
 <?php
 
-namespace Maggomann\LaravelAddressable\Tests\Database\Factories;
+namespace Maggomann\Addressable\Tests\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
-use Maggomann\LaravelAddressable\Tests\TestClasses\User;
+use Maggomann\Addressable\Tests\TestClasses\User;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Maggomann\LaravelAddressable\Tests\TestClasses\User>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Maggomann\Addressable\Tests\TestClasses\User>
  */
 class UserFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
-     * @var class-string<\Maggomann\LaravelAddressable\Tests\TestClasses\User>
+     * @var class-string<\Maggomann\Addressable\Tests\TestClasses\User>
      */
     protected $model = User::class;
 

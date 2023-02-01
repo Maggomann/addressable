@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Maggomann\LaravelAddressable\Models\AddressCategory;
+use Maggomann\Addressable\Models\AddressCategory;
 
 class AddressCategoryTableSeeder extends Seeder
 {

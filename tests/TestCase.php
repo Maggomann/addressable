@@ -1,8 +1,8 @@
 <?php
 
-namespace Maggomann\LaravelAddressable\Tests;
+namespace Maggomann\Addressable\Tests;
 
-use Maggomann\LaravelAddressable\LaravelAddressableServiceProvider;
+use Maggomann\Addressable\AddressableServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
@@ -15,7 +15,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            LaravelAddressableServiceProvider::class,
+            AddressableServiceProvider::class,
         ];
     }
 }

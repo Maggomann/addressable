@@ -1,20 +1,20 @@
 <?php
 
-namespace Maggomann\LaravelAddressable\Tests\Database\Factories;
+namespace Maggomann\Addressable\Tests\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Maggomann\LaravelAddressable\Models\Address;
-use Maggomann\LaravelAddressable\Tests\TestClasses\User;
+use Maggomann\Addressable\Models\Address;
+use Maggomann\Addressable\Tests\TestClasses\User;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Maggomann\LaravelAddressable\Models\Address>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Maggomann\Addressable\Models\Address>
  */
 class AddressFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
-     * @var class-string<\Maggomann\LaravelAddressable\Models\Address>
+     * @var class-string<\Maggomann\Addressable\Models\Address>
      */
     protected $model = Address::class;
 

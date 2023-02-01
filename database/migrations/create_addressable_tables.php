@@ -1,12 +1,12 @@
 <?php
 
-use Database\Seeders\LaravelAddressableProductionTableSeeder;
+use Database\Seeders\AddressableProductionTableSeeder;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
-use Maggomann\LaravelAddressable\Models\AddressGender;
+use Maggomann\Addressable\Models\AddressGender;
 
 return new class extends Migration
 {
@@ -63,7 +63,7 @@ return new class extends Migration
 
         if (DB::table(app(AddressGender::class)->getTable())->first() === null) {
             Artisan::call('db:seed', [
-                '--class' => LaravelAddressableProductionTableSeeder::class,
+                '--class' => AddressableProductionTableSeeder::class,
             ]);
         }
     }
