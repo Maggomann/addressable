@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class LaravelAddressableProductionTableSeeder extends Seeder
+class AddressableProductionTableSeeder extends Seeder
 {
     public function run(): void
     {

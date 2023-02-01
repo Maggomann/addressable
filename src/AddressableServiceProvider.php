@@ -1,23 +1,23 @@
 <?php
 
-namespace Maggomann\LaravelAddressable;
+namespace Maggomann\Addressable;
 
-use Maggomann\LaravelAddressable\Commands\FilamentCommand;
-use Maggomann\LaravelAddressable\Commands\LaravelAddressableCommand;
+use Maggomann\Addressable\Commands\FilamentCommand;
+use Maggomann\Addressable\Commands\AddressableCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class LaravelAddressableServiceProvider extends PackageServiceProvider
+class AddressableServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
         $package
-            ->name('laravel-addressable')
+            ->name('addressable')
             ->hasConfigFile()
             ->hasMigration('create_addressable_tables')
             ->hasCommands([
                 FilamentCommand::class,
-                LaravelAddressableCommand::class,
+                AddressableCommand::class,
             ])
             ->hasTranslations();
     }
