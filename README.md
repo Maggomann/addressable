@@ -2,7 +2,7 @@
 
 ---
 
-## laravel addressable
+## addressable
 
 This package provides a minimal trait Addressable to add eloquent models using these addresses for laraval. The package will be extended over time. It was directly outsourced as a package before I start using this class modified in different projects.
 
